@@ -1,14 +1,14 @@
 ---------------------------------------------------------
 
-Define usuário
+Define usuÃ¡rio
 ---------------------------------------------
 git config --global user.name "Aparicio"
 git config --global user.email Ap@ricio.com
 ---------------------------------------------
 
-Cria alias pro endereço do projeto
+Cria alias pro endereÃ§o do projeto
 --------------------------------------------------------------
-git add remote goparty http://github.com/wagnerdalpiva/goparty
+git remote add goparty http://github.com/wagnerdalpiva/goparty
 --------------------------------------------------------------
 
 Baixa o projeto pro pc
@@ -18,9 +18,9 @@ git clone goparty
 
 Comandos
 ------------------------------------------------------
-git pull goparty master - Baixa alterações do projeto
+git pull goparty master - Baixa alteraÃ§Ãµes do projeto
 git add *.html - Adiciona arquivos para o projeto
-git status - Mostra alterações feitas
-git commit -m "Comentário manerão" - salva alterações
-git push goparty master - Upload das alterações locais
+git status - Mostra alteraÃ§Ãµes feitas
+git commit -m "ComentÃ¡rio manerÃ£o" - salva alteraÃ§Ãµes
+git push goparty master - Upload das alteraÃ§Ãµes locais
 ------------------------------------------------------
