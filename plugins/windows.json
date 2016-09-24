@@ -13,10 +13,10 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "HelloCordova"
         },
-        "cordova-plugin-geolocation": {
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "HelloCordova"
         },
-        "cordova-plugin-statusbar": {
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "HelloCordova"
         }
     },

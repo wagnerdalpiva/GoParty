@@ -15,6 +15,14 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Usuario\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-statusbar"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-geolocation": {
         "source": {
             "type": "local",
@@ -26,17 +34,9 @@
     "cordova-plugin-compat": {
         "source": {
             "type": "local",
-            "path": "C:\\Users\\Usuario\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-compat"
+            "path": "C:\\Users\\Feevale\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-compat"
         },
         "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-statusbar": {
-        "source": {
-            "type": "local",
-            "path": "C:\\Users\\Usuario\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-statusbar"
-        },
-        "is_top_level": true,
         "variables": {}
     }
 }
