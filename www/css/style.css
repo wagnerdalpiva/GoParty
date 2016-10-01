@@ -1,0 +1,76 @@
+#google-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  background-color: #e7eaf0;
+}
+
+#cd-google-map {
+  position: relative;
+  height: 70%;
+}
+#cd-google-map address {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1em 1em;
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+#cd-zoom-in, #cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #f0ad4e;
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url("../img/cd-icon-controller.svg");
+}
+.no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
+  background-color: #d36868;
+}
+
+#cd-zoom-in {
+  background-position: 50% 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#cd-zoom-out {
+  background-position: 50% -32px;
+}
+
+#cd-menu-top, #cd-cur-pos {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #f0ad4e;
+  background-repeat: no-repeat;
+  background-size: 64px 32px;
+  background-image: url("../img/cd-icon-controller.svg");
+}
+
+#cd-menu-top {
+  background-position: 0% 0;
+  margin-top: 5px;
+}
+
+#cd-cur-pos {
+  background-position: 50% 0px;
+}
+
+footer div{
+	cursor: pointer;
+	height: 40px;
+	width: 80px;
+	margin: 10px;
+	background-color: #f0ad4e;
+	float: left;
+}
