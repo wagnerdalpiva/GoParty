@@ -20,6 +20,10 @@ $(document).ready(function(){
         findClosestN(GeoMarker.getPosition(), 5);
         $('#modal-nearby').modal('show');
     });
+
+    $('#btn-back').click(function(){
+        onBackKeyDown();
+    });
 });
 
 function initialize() {

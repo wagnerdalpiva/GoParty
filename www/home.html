@@ -37,6 +37,7 @@
         </style>
 
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/swipebox.css">
 
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
@@ -142,8 +143,52 @@
         </div>
         <div id="housepage" style="display:none;">
             <h1>Local</h1>
+            <section id="exemple" class="container">
+                <div class="wrap small-width">
+                    <div id="try"></div>
+                    <ul id="box-container">
+                        <li class="box">
+                            <a href="http://swipebox.csag.co/images/image-1.jpg" class="swipebox" title="Fog">
+                                <img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
+                            </a>
+                        </li>
+                        <li class="box">
+                            <a href="http://swipebox.csag.co/images/image-2.jpg" class="swipebox" title="City">
+                                <img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <footer>
+                <a id="btn-back" href="#" class="btn btn-default"><i class="fa fa-reply" aria-hidden="true"></i></a>
+                <a id="btn-camera" href="#" class="btn btn-default"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                <a id="btn-route" href="#" class="btn btn-default"><i class="fa fa-location-arrow" aria-hidden="true"></i></a>
+            </footer>
         </div>
-        <script src="js/map.js"></script> <!-- Resource jQuery -->
+        <script src="lib/ios-orientationchange-fix.js"></script>
+        <script src="lib/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.swipebox.js"></script>
+        <script type="text/javascript">
+        $( document ).ready(function() {
+
+                /* Basic Gallery */
+                $( '.swipebox' ).swipebox();
+                
+                /* Video */
+                $( '.swipebox-video' ).swipebox();
+
+                /* Dynamic Gallery */
+                $( '#gallery' ).click( function( e ) {
+                    e.preventDefault();
+                    $.swipebox( [
+                        { href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
+                        { href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
+                    ] );
+                } );
+
+          });
+        </script>
     </body>
 
 </html>
