@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 function initialize() {
     //buttons
-    document.getElementById("div_map").style.height = screen.height + "px";        
+   // document.getElementById("div_map").style.height = screen.height + "px";        
     var main_color = '#2f01ff',
         saturation_value= -20,
         brightness_value= 5;

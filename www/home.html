@@ -35,8 +35,6 @@
                 @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
                 /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
         </style>
-
-        <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="css/swipebox.css">
 
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
@@ -73,51 +71,42 @@
         <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
         <script type="application/javascript" src="lib/geolocation-marker.js"></script>
         <script src="js/app.js"></script>
-        <style>
-            .floating-action-button {
-                 position: fixed;
-                 right:    20px;
-                 bottom: 20px;
-                 z-index: 1000;
-                }
-                ul.dropdown-menu {
-                  box-shadow: none;
-                  border: 0;
-                  min-width:0;
-                  background:transparent
-                }
-                .dropdown-menu>li>a{
-                    padding: 5px 10px;
-                }
-            .modal-body{
-                padding: 0px;
-            }
-        </style>
+        <link rel="stylesheet" href="css/app.css">
+        <script type="text/javascript">
+			function id(el) {
+				return document.getElementById(el);
+			}
+			function hide(el) {
+				id(el).style.display = 'none';
+			}
+			window.onload = function() {
+				id('mainpage').style.display = 'block';
+				hide('loading');
+			}
+		</script>
     </head>
     <body>
+    	<img src="images/loading.gif" alt="" id="loading" class="content"/>
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
         <div class="upage" id="mainpage">
             <div class="upage-outer">
-                <div class="upage-content ac0" id="page_52_87">
-                    <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
+                <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
 
-                    <div class="btn-group btn-group-sm dropup floating-action-button">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-2x fa-cog" aria-hidden="true"></i>
-                        </button>
+                <div class="btn-group btn-group-sm dropup floating-action-button">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-2x fa-cog" aria-hidden="true"></i>
+                    </button>
 
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li>
-                                <a href="#" class="btn btn-default" onclick="setMyPosition();"><i class="fa fa-2x fa-street-view" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a id="btn-nearby" href="#" class="btn btn-default"><i class="fa fa-2x fa-map-marker" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="#" class="btn btn-default" onclick="setMyPosition();"><i class="fa fa-2x fa-street-view" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a id="btn-nearby" href="#" class="btn btn-default"><i class="fa fa-2x fa-map-marker" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div id="modal-nearby" class="modal outer-element uib_w_2" data-uib="twitter%20bootstrap/modal" data-ver="1" data-backdrop="true">
@@ -141,22 +130,22 @@
                 </div>
             </div>
         </div>
-        <div id="housepage" style="display:none;">
+        <div class="content" id="housepage" style="display: none;">
             <h1>Local</h1>
             <section id="exemple" class="container">
                 <div class="wrap small-width">
                     <div id="try"></div>
-                    <ul id="box-container">
-                        <li class="box">
+                    <div id="box-container">
+                        <div class="box">
                             <a href="http://swipebox.csag.co/images/image-1.jpg" class="swipebox" title="Fog">
                                 <img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
                             </a>
-                        </li>
-                        <li class="box">
+                        </div>
+                        <div class="box">
                             <a href="http://swipebox.csag.co/images/image-2.jpg" class="swipebox" title="City">
                                 <img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
                             </a>
-                        </li>
+                        </div>
                     </ul>
                 </div>
             </section>
@@ -174,10 +163,6 @@
 
                 /* Basic Gallery */
                 $( '.swipebox' ).swipebox();
-                
-                /* Video */
-                $( '.swipebox-video' ).swipebox();
-
                 /* Dynamic Gallery */
                 $( '#gallery' ).click( function( e ) {
                     e.preventDefault();
