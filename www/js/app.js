@@ -7,11 +7,19 @@ document.addEventListener("intel.xdk.device.orientation.change",function(){
 
 document.addEventListener("backbutton", onBackKeyDown, false);
 
-function onBackKeyDown() {
+/*function onBackKeyDown() {
     if($('#mainpage').css('display') == 'none' && $('#modal-nearby').css('display') == 'none'){
-        $('#housepage').slideUp(500, function(){
+        $('#housepage').slideUp(0, function(){
             $('#mainpage').slideDown(500);
         });
+    }
+}
+*/
+function onBackKeyDown() {
+    if($('#mainpage').css('display') == 'none' && $('#modal-nearby').css('display') == 'none'){
+        $('#housepage').css('display','none');
+        $('#mainpage').css('display','block');
+        google.maps.event.trigger(map, "resize");
     }
 }
 
@@ -29,9 +37,9 @@ $(document).ready(function(){
 function initialize() {
     //buttons
    // document.getElementById("div_map").style.height = screen.height + "px";        
-    var main_color = '#2f01ff',
-        saturation_value= -20,
-        brightness_value= 5;
+    var main_color = '#3D008F',
+        saturation_value= 0,
+        brightness_value= 0;
     var style= [ 
         {
             //set saturation for the labels on the map
@@ -211,28 +219,50 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('div_map'),
     mapOptions);
+
+    $(window).resize(function() {
+        google.maps.event.trigger(map, "resize");
+        if ($('#housepage').css('height') > $('body').css('height')){
+            $('#housepage').css('background','inherit');
+        }else{
+            $('#housepage').css('background','transparent');
+        }
+     });
     
     var zoomLevel =  map.getZoom();
     if (zoomLevel>=5 && zoomLevel<=10) { 
          // call the setMarker function for the marker1
     }
+    var image = 'images/marker.png';
     var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-29.68, -51.13),
-        animation: google.maps.Animation.BOUNCE,
-        title:"Feevale"
+        position: new google.maps.LatLng(-29.68, -51.13),
+        title:"Feevale"//,
+        //icon: image
     });
-    marker.addListener('click', function(){
+ /*   marker.addListener('click', function(){
         $('#mainpage').slideUp(500, function(){
-            $('#housepage').slideDown(500);
+            $('#housepage').slideDown(0);
+            if ($('#housepage').css('height') > $('body').css('height')){
+                $('#housepage').css('background','inherit');
+            }
             getGeison();
         });
+    });*/
+
+    marker.addListener('click', function(){
+        $('#housepage').css('display','block');
+        $('#mainpage').css('display','none');
+        if ($('#housepage').css('height') > $('body').css('height')){
+            $('#housepage').css('background','inherit');
+        }
+        getGeison();
     });
     
     marker.setMap(map);
     markers.push(marker);
     
     GeoMarker = new GeolocationMarker();
-    GeoMarker.setCircleOptions({fillColor: '#ff751a'});
+    GeoMarker.setCircleOptions({fillColor: '#3D008F'});
 
     google.maps.event.addListenerOnce(GeoMarker, 'position_changed', function() {        
         map.setCenter(this.getPosition());
