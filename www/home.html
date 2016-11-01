@@ -64,7 +64,6 @@
         <script type="application/javascript" src="sidebar/js/hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&amp;sensor=true"></script>        
         <script type="application/javascript" src="google_maps/google_maps.js"></script>
@@ -95,16 +94,16 @@
                 <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
 
                 <div class="btn-group btn-group-sm dropup floating-action-button">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-2x fa-cog" aria-hidden="true"></i>
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/options2.png">
                     </button>
 
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li>
-                            <a href="#" class="btn btn-default" onclick="setMyPosition();"><i class="fa fa-2x fa-street-view" aria-hidden="true"></i></a>
+                            <a onclick="setMyPosition();"><img src="images/man2.png"></a>
                         </li>
                         <li>
-                            <a id="btn-nearby" href="#" class="btn btn-default"><i class="fa fa-2x fa-map-marker" aria-hidden="true"></i></a>
+                            <a id="btn-nearby"><img src="images/find2.png"></a>
                         </li>
                     </ul>
                 </div>
@@ -131,49 +130,48 @@
             </div>
         </div>
         <div class="content" id="housepage" style="display: none;">
-            <h1>Local</h1>
-            <section id="exemple" class="container">
-                <div class="wrap small-width">
-                    <div id="try"></div>
-                    <div id="box-container">
-                        <div class="box">
-                            <a href="http://swipebox.csag.co/images/image-1.jpg" class="swipebox" title="Fog">
-                                <img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
-                            </a>
-                        </div>
-                        <div class="box">
-                            <a href="http://swipebox.csag.co/images/image-2.jpg" class="swipebox" title="City">
-                                <img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
-                            </a>
-                        </div>
-                    </ul>
-                </div>
+            <section id="images" class="container">
+				<div class="box">
+					<div class="box-header">
+						<h2>Pafuncio</h2>
+					</div>
+					<div class="box-img">
+						<img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
+						<h3>30/10/2016</h3>
+					</div>
+				</div>
+				<!--<div class="box">
+					<div class="box-header">
+						<h2>Pafuncio</h2>
+					</div>
+					<div class="box-img">
+						<img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
+					</div>
+					<div class="box-footer">
+						<h3>30/10/2016</h3>
+					</div>
+				</div>-->
+				<div class="box">
+					<div class="box-header">
+						<h2>Pafuncio</h2>
+					</div>
+					<div class="box-img">
+						<img src="http://swipebox.csag.co/images/image-3.jpg" alt="image">
+                        <h3>30/10/2016</h3>
+					</div>
+				</div>
             </section>
+            <div id="end">
+            </div>
             <footer>
-                <a id="btn-back" href="#" class="btn btn-default"><i class="fa fa-reply" aria-hidden="true"></i></a>
-                <a id="btn-camera" href="#" class="btn btn-default"><i class="fa fa-camera" aria-hidden="true"></i></a>
-                <a id="btn-route" href="#" class="btn btn-default"><i class="fa fa-location-arrow" aria-hidden="true"></i></a>
+                <span>
+                    Local
+                    <button id="btn-back"><img src="images/back2.png"></button>
+                    <button id="btn-camera"><img src="images/camera2.png"></button>
+                    <button id="btn-route"><img src="images/route2.png"></button>
+                </span>
             </footer>
         </div>
-        <script src="lib/ios-orientationchange-fix.js"></script>
-        <script src="lib/jquery-2.1.0.min.js"></script>
-        <script src="js/jquery.swipebox.js"></script>
-        <script type="text/javascript">
-        $( document ).ready(function() {
-
-                /* Basic Gallery */
-                $( '.swipebox' ).swipebox();
-                /* Dynamic Gallery */
-                $( '#gallery' ).click( function( e ) {
-                    e.preventDefault();
-                    $.swipebox( [
-                        { href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
-                        { href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
-                    ] );
-                } );
-
-          });
-        </script>
     </body>
 
 </html>

@@ -9,9 +9,12 @@ document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown() {
     if($('#mainpage').css('display') == 'none' && $('#modal-nearby').css('display') == 'none'){
-        $('#housepage').slideUp(500, function(){
+        /*$('#housepage').slideUp(0, function(){
             $('#mainpage').slideDown(500);
-        });
+            google.maps.event.trigger(map, "resize");
+        });*/
+        $('#mainpage').css('display','block');
+        $('#housepage').css('display','none');
     }
 }
 
@@ -211,6 +214,15 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('div_map'),
     mapOptions);
+
+    $(window).resize(function() {
+        google.maps.event.trigger(map, "resize");
+        if($('#images').height() > ($('body').height()*0.85)){
+            $('#end').css('height',($('footer').css('height')));
+        }else{
+            $('#end').css('height',0);
+        }
+     });
     
     var zoomLevel =  map.getZoom();
     if (zoomLevel>=5 && zoomLevel<=10) { 
@@ -218,14 +230,21 @@ function initialize() {
     }
     var marker = new google.maps.Marker({
             position: new google.maps.LatLng(-29.68, -51.13),
-        animation: google.maps.Animation.BOUNCE,
         title:"Feevale"
     });
     marker.addListener('click', function(){
-        $('#mainpage').slideUp(500, function(){
-            $('#housepage').slideDown(500);
+        /*$('#mainpage').slideUp(500, function(){
+            $('#housepage').slideDown(0);
+            if ($('#housepage').css('height') > $('body').css('height')){
+                $('#housepage').css('background','inherit');
+            }
             getGeison();
-        });
+        });*/
+        $('#housepage').css('display','block');
+        $('#mainpage').css('display','none');
+        if($('#images').height() > ($('body').height()*0.85)){
+            $('#end').css('height',($('footer').css('height')));
+        }
     });
     
     marker.setMap(map);
