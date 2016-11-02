@@ -121,7 +121,7 @@ html::-webkit-scrollbar {
 	 padding: 0px;
  }
  .box-header, .box-footer{
-	 background-color: #2d2767;
+	 background-color: #2C2E59;
 	 color: white;
 	 text-align: left;
 	 padding: 5px;
@@ -131,5 +131,24 @@ html::-webkit-scrollbar {
     margin-right: 10px;
     text-align: right;
     font-size: 15px;
+    color: white;
+    text-shadow: 1px 1px #000000;
+    margin-bottom: 21px;
  }
- 
+ #buttons{
+    width: 46%;
+    float: right;
+    padding: 5px;
+ }
+ #local{
+    float: left;
+    margin: 2%;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif; 
+    font-size: 23px;
+    line-height: 85%;
+}
+.box h2{
+    margin: 10px
+    font-family: 'Lato';
+}

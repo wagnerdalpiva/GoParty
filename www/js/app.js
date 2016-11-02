@@ -15,6 +15,7 @@ function onBackKeyDown() {
         });*/
         $('#mainpage').css('display','block');
         $('#housepage').css('display','none');
+        google.maps.event.trigger(map, "resize");
     }
 }
 
@@ -217,7 +218,14 @@ function initialize() {
 
     $(window).resize(function() {
         google.maps.event.trigger(map, "resize");
-        if($('#images').height() > ($('body').height()*0.85)){
+        if($('footer').width() < 364){
+            $('#buttons').css('width','100%');
+            $('#local').css('width','100%');
+        }else{
+            $('#buttons').css('width','46%');
+            $('#local').css('width','50%');
+        }
+        if($('#images').height() > ($('body').height()*0.92)){
             $('#end').css('height',($('footer').css('height')));
         }else{
             $('#end').css('height',0);
@@ -228,9 +236,11 @@ function initialize() {
     if (zoomLevel>=5 && zoomLevel<=10) { 
          // call the setMarker function for the marker1
     }
+    var image = 'images/Marker3.png';
     var marker = new google.maps.Marker({
             position: new google.maps.LatLng(-29.68, -51.13),
-        title:"Feevale"
+        title:"Feevale",
+        icon: image
     });
     marker.addListener('click', function(){
         /*$('#mainpage').slideUp(500, function(){
@@ -242,7 +252,7 @@ function initialize() {
         });*/
         $('#housepage').css('display','block');
         $('#mainpage').css('display','none');
-        if($('#images').height() > ($('body').height()*0.85)){
+        if($('#images').height() > ($('body').height()*0.92)){
             $('#end').css('height',($('footer').css('height')));
         }
     });
@@ -251,7 +261,7 @@ function initialize() {
     markers.push(marker);
     
     GeoMarker = new GeolocationMarker();
-    GeoMarker.setCircleOptions({fillColor: '#ff751a'});
+    GeoMarker.setCircleOptions({fillColor: '#6495ED'});
 
     google.maps.event.addListenerOnce(GeoMarker, 'position_changed', function() {        
         map.setCenter(this.getPosition());
