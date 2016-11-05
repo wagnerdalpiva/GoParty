@@ -85,12 +85,14 @@
 		</script>
     </head>
     <body>
-    	<img src="images/loading.gif" alt="" id="loading" class="content"/>
+    	<p id="spinner">Loading</p>
+    	<!--<img src="images/loading.gif" alt="" id="loading" class="content"/>
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage" id="mainpage">
+        <div class="content" id="mainpage">
             <div class="upage-outer">
+            	<div class="header"><h1>coiso</h1></div>
                 <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
 
                 <div class="btn-group btn-group-sm dropup floating-action-button">
@@ -98,7 +100,7 @@
                         <img src="images/options2.png">
                     </button>
 
-                    <ul class="dropdown-menu dropdown-menu-right">
+                    <ul id="menu" class="dropdown-menu dropdown-menu-right">
                         <li>
                             <a onclick="setMyPosition();"><img src="images/man2.png"></a>
                         </li>
@@ -113,7 +115,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal">x</button>
-                            <h4 class="modal-title">Proximas...</h4>
+                            <h4 class="modal-title">Casas próximas</h4>
                         </div>
 
                         <div class="modal-body">

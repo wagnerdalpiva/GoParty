@@ -23,6 +23,13 @@ $(document).ready(function(){
     $('#btn-nearby').click(function(){
         findClosestN(GeoMarker.getPosition(), 5);
         $('#modal-nearby').modal('show');
+        if($('footer').width() < 364){
+            $('#buttons').css('width','100%');
+            $('#local').css('width','100%');
+        }else{
+            $('#buttons').css('width','46%');
+            $('#local').css('width','50%');
+        }
     });
 
     $('#btn-back').click(function(){

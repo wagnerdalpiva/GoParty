@@ -33,7 +33,7 @@ body {
     letter-spacing:1px;
     text-align:center; 
     margin-top: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 input { 
@@ -56,6 +56,13 @@ input {
     transition: box-shadow .5s ease;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+.modal-header{
+    background-color: #2C2E59;
+    color: white;
+    font-family: Lato;
+    font-size: 20px;
+}
 
 footer{
 	background-color: black;
@@ -80,8 +87,8 @@ footer{
 }
 .floating-action-button {
     position: fixed;
-    right:    20px;
-    bottom: 20px;
+    top:    8px;
+    right: 8px;
     z-index: 1000;
 }
 ul.dropdown-menu {
@@ -90,6 +97,13 @@ ul.dropdown-menu {
 	min-width:0;
 	background:transparent
 }
+#menu{
+    top: 100%;
+}
+.header{
+    height: 9%;
+    color: white;
+}
 .dropdown-menu>li>a{
 	cursor: pointer;
 	padding: 5px 0px;
@@ -97,8 +111,11 @@ ul.dropdown-menu {
 .modal-body{
     padding: 0px;
 }
-#mainpage, .upage-outer, #div_map{
+#mainpage, .upage-outer{
     height: 100%;
+}
+#div_map{
+    height: 91%;
 }
 #housepage{
 	background-color: white;
@@ -147,8 +164,34 @@ html::-webkit-scrollbar {
     font-family: 'Lato', sans-serif; 
     font-size: 23px;
     line-height: 85%;
+    width:50%;
 }
 .box h2{
-    margin: 10px
+    margin: 10px;
     font-family: 'Lato';
+}
+#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    height: 200px;
+    width: 200px;
+    text-indent: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-mask-image: url(../images/spinner.png);
+    background-color: #feefee;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes spinnerRotate {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+    }
 }
