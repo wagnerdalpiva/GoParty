@@ -1,76 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <!--
-  * Please see the included README.md file for license terms and conditions.
-  -->
-
     <head>
-        <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <meta charset="UTF-8">
         <title>GoParty</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-
-        <!--
-  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
-  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
-  * For a quick overview of "meta viewport" and @viewport, see this article:
-  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
-  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
-  * Additional useful references include:
-  *   http://www.quirksmode.org/mobile/viewports.html
-  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
-  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
--->
-
-        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
-
-        <style>
-            /* following three (cascaded) are equivalent to above three meta viewport statements */
-            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
-            /* see http://dev.w3.org/csswg/css-device-adapt/ */
-                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
-                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
-                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
-        </style>
-       <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
-
-        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
-        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
-        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-
-        <!-- Recommended location for your JavaScript libraries -->
-        <!-- These library references (below) are just examples to give you the general idea... -->
-        <!-- <script src="lib/mc/hammer.js"></script> -->
-        <!-- <script src="lib/ft/fastclick.js"></script> -->
-
-        <!--
-  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
-  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
-  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
-  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
--->
-        <script src="cordova.js" id="xdkJScordova_"></script>
-
-        <!-- for your event code, see README and file comments for details -->
-        <script src="js/init-app.js"></script>
-        <!-- for your init code, see README and file comments for details -->
-        <script src="xdk/init-dev.js"></script>
-        <!-- normalizes device and document ready events, see file for details -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
-        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
-        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
-        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="lib/bootstrap.min.js"></script>
         <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&amp;sensor=true"></script>        
         <script type="application/javascript" src="google_maps/google_maps.js"></script>
-        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
         <script type="application/javascript" src="lib/geolocation-marker.js"></script>
         <script src="js/app.js"></script>
         <link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/sidebar.css">
         <script type="text/javascript">
 			function id(el) {
 				return document.getElementById(el);
@@ -80,32 +26,53 @@
 			}
 			window.onload = function() {
 				id('mainpage').style.display = 'block';
-				hide('loading');
+				hide('spinner');
 			}
 		</script>
     </head>
     <body>
     	<p id="spinner">Loading</p>
-    	<!--<img src="images/loading.gif" alt="" id="loading" class="content"/>
-        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
-        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
-        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="content" id="mainpage">
+    	<div class="content" id="mainpage">
             <div class="upage-outer">
-            	<div class="header"><h1>coiso</h1></div>
+                <div class="aside">
+                  <div class="aside-header">
+                    <div id="Astolfo" class="picture" style="background-image: url(images/perf2.png); background-size: 40;"></div>
+                    <h4>GoParty<h4>
+                  </div>
+                  <div class="aside-contents">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Conta    
+                        </li> 
+                        <li class="list-group-item">
+                            Indicar casa
+                        </li>
+                        <li class="list-group-item">
+                            Sobre
+                        </li>
+                        <li class="list-group-item">
+                            Logout
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="aside-backdrop"></div>
+            	<div class="header">
+                    <button id="config" onclick="$('.aside').asidebar('open')"></button>
+                    <h1 style="float: left;">coiso</h1>
+                </div>
                 <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
 
                 <div class="btn-group btn-group-sm dropup floating-action-button">
-                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="images/options2.png">
+                    <button type="button" id="options" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
 
                     <ul id="menu" class="dropdown-menu dropdown-menu-right">
                         <li>
-                            <a onclick="setMyPosition();"><img src="images/man2.png"></a>
+                            <button id="position" onclick="setMyPosition();"></button>
                         </li>
                         <li>
-                            <a id="btn-nearby"><img src="images/find2.png"></a>
+                            <button id="search"></button>
                         </li>
                     </ul>
                 </div>
@@ -114,15 +81,14 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button class="close" data-dismiss="modal">x</button>
                             <h4 class="modal-title">Casas próximas</h4>
+							<input id="slide" type="range" min="1" max="50" step="1" value="1" onchange="updateSlider(this.value)" />
+							<input type="text" id="range" value="1km"></input>
                         </div>
-
                         <div class="modal-body">
                             <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
                                 <div class="widget-container content-area vertical-col">
-                                    <div id="list-nearby" class="list-group widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
-                                                                                
+                                    <div id="list-nearby" class="list-group widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">                                         
                                     </div>                                    
                                 </div>
                             </div>
@@ -132,30 +98,26 @@
             </div>
         </div>
         <div class="content" id="housepage" style="display: none;">
+			<div class="header">
+				<h1>Casa do Juca</h1>
+			</div>
             <section id="images" class="container">
 				<div class="box">
 					<div class="box-header">
-						<h2>Pafuncio</h2>
+						<div id="Astolfo" class="picture" style="background-image: url(images/perf1.jpg)"></div>
+						<div class="autor">Pafuncio</div>
+						<button class="user-options"></button>
 					</div>
 					<div class="box-img">
 						<img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
 						<h3>30/10/2016</h3>
 					</div>
 				</div>
-				<!--<div class="box">
-					<div class="box-header">
-						<h2>Pafuncio</h2>
-					</div>
-					<div class="box-img">
-						<img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
-					</div>
-					<div class="box-footer">
-						<h3>30/10/2016</h3>
-					</div>
-				</div>-->
 				<div class="box">
 					<div class="box-header">
-						<h2>Pafuncio</h2>
+						<div id="Astolfo" class="picture" style="background-image: url(images/perf2.png); background-size: 40;"></div>
+						<div class="autor">Astolfo</div>
+						<button class="user-options"></button>
 					</div>
 					<div class="box-img">
 						<img src="http://swipebox.csag.co/images/image-3.jpg" alt="image">
@@ -166,16 +128,13 @@
             <div id="end">
             </div>
             <footer>
-                <div id="local">
-                    Casa do Juca das quebrada
-                </div>
                 <div id="buttons">
-                    <button id="btn-back"><img src="images/back2.png"></button>
-                    <button id="btn-camera"><img src="images/camera2.png"></button>
-                    <button id="btn-route"><img src="images/route2.png"></button>
+                    <button id="back"></button>
+                    <button id="camera"></button>
+                    <button id="route"></button>
                 </div>
             </footer>
         </div>
+        <script src="lib/asidebar.jquery.js"></script>
     </body>
-
 </html>
