@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
         <script type="text/javascript">
 			function id(el) {
 				return document.getElementById(el);
@@ -40,18 +41,39 @@
                     <h4>GoParty<h4>
                   </div>
                   <div class="aside-contents">
+                    <!-- SVG Sprite -->
+                    <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                            <symbol id="ripply-scott" viewBox="0 0 100 100">
+                                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+                            </symbol>
+                        </svg>
+                    </div>
+                    <!-- /end sprite -->
                     <ul class="list-group">
                         <li class="list-group-item">
-                            Conta    
+                            Conta 
+                            <svg class="ripple-obj" id="js-ripple">
+                                <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                            </svg>   
                         </li> 
                         <li class="list-group-item">
                             Indicar casa
+                            <svg class="ripple-obj" id="js-ripple">
+                                <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                            </svg>
                         </li>
                         <li class="list-group-item">
                             Sobre
+                            <svg class="ripple-obj" id="js-ripple">
+                                <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                            </svg>
                         </li>
                         <li class="list-group-item">
                             Logout
+                            <svg class="ripple-obj" id="js-ripple">
+                                <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                            </svg>
                         </li>
                     </ul>
                   </div>
@@ -135,6 +157,8 @@
                 </div>
             </footer>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
         <script src="lib/asidebar.jquery.js"></script>
+        <script src="lib/ripple-config.js"></script>
     </body>
 </html>
