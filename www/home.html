@@ -80,21 +80,21 @@
                 </div>
                 <div class="aside-backdrop"></div>
             	<div class="header">
-                    <button id="config" onclick="$('.aside').asidebar('open')"></button>
-                    <h1 style="float: left;">coiso</h1>
+                    <button id="config" class="cbutton cbutton--effect-boris" onclick="$('.aside').asidebar('open')"></button>
+                    <h3 style="float: left;">coiso</h3>
                 </div>
                 <div class="widget uib_w_1 maps-size d-margins" id="div_map"></div>
 
                 <div class="btn-group btn-group-sm dropup floating-action-button">
-                    <button type="button" id="options" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" id="options" class="dropdown-toggle cbutton cbutton--effect-boris" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
 
-                    <ul id="menu" class="dropdown-menu dropdown-menu-right">
+                    <ul id="menu" class="dropdown-menu">
                         <li>
-                            <button id="position" onclick="setMyPosition();"></button>
+                            <button class="cbutton cbutton--effect-boris" id="position" onclick="setMyPosition();"></button>
                         </li>
                         <li>
-                            <button id="search"></button>
+                            <button class="cbutton cbutton--effect-boris" id="search"></button>
                         </li>
                     </ul>
                 </div>
@@ -121,14 +121,15 @@
         </div>
         <div class="content" id="housepage" style="display: none;">
 			<div class="header">
-				<h1>Casa do Juca</h1>
+				<button id="config" class="cbutton cbutton--effect-boris"></button>
+				<h3 style="float: left;">Casa do Juca</h3>
 			</div>
             <section id="images" class="container">
 				<div class="box">
 					<div class="box-header">
 						<div id="Astolfo" class="picture" style="background-image: url(images/perf1.jpg)"></div>
 						<div class="autor">Pafuncio</div>
-						<button class="user-options"></button>
+						<button class="user-options cbutton cbutton--effect-boris"></button>
 					</div>
 					<div class="box-img">
 						<img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
@@ -139,7 +140,7 @@
 					<div class="box-header">
 						<div id="Astolfo" class="picture" style="background-image: url(images/perf2.png); background-size: 40;"></div>
 						<div class="autor">Astolfo</div>
-						<button class="user-options"></button>
+						<button class="user-options cbutton cbutton--effect-boris"></button>
 					</div>
 					<div class="box-img">
 						<img src="http://swipebox.csag.co/images/image-3.jpg" alt="image">
@@ -151,14 +152,16 @@
             </div>
             <footer>
                 <div id="buttons">
-                    <button id="back"></button>
-                    <button id="camera"></button>
-                    <button id="route"></button>
+                    <button id="back" class="cbutton cbutton--effect-boris"></button>
+                    <button id="camera" class="cbutton cbutton--effect-boris"></button>
+                    <button id="route" class="cbutton cbutton--effect-boris"></button>
                 </div>
             </footer>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
         <script src="lib/asidebar.jquery.js"></script>
         <script src="lib/ripple-config.js"></script>
+        <script src="lib/modernizr.custom.js"></script>
+		<script src="lib/classie.js"></script>
     </body>
 </html>

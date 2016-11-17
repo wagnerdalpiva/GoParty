@@ -36,6 +36,7 @@ body {
     padding-top: 10px;
 }
 h4{
+    color: white;
     padding: 10px;
     margin: 0px;
 }
@@ -210,9 +211,11 @@ button{
 }
 #position{
     background-image: url(../images/man2.png);
+    position: relative;
 }
 #search{
     background-image: url(../images/find2.png);
+    position: relative;
 }
 #back{
     background-image: url(../images/back2.png);
@@ -263,4 +266,6 @@ button{
 .list-group-item{
     background-color: #232224;
     border: 0px;
+    color: #286aab;
+    font-size: 1.2em;
 }
