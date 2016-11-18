@@ -25,7 +25,6 @@ var ripplyScott = (function() {
       scale: scale_ratio,
       opacity: 0
     });
-
     return tl;
   }
 
@@ -37,10 +36,16 @@ var ripplyScott = (function() {
         button[x].addEventListener('click', function(event) {
           ripple = $(this).find('.js-ripple');
           rippleAnimation.call(this, event, timing);
+          var ref = $(this).attr('href')
+
+          setTimeout(function(){
+              location.href = ref;
+          },320);
+
         });
       }
     }
   };
 })();
 
-ripplyScott.init('.list-group li', 0.55);
+ripplyScott.init('.button', 0.55);

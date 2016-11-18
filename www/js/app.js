@@ -19,21 +19,6 @@ function onBackKeyDown() {
     }
 }
 
-function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-   
-    console.log(sidebar.style.left);
-   
-    if(sidebar.style.left == "-200px")
-    {
-        sidebar.style.left = "0px";
-    }
-    else
-    {
-        sidebar.style.left = "-200px";
-    }
-}
-
 function updateSlider(x) {
 	$('#range').val( x + "Km");
 }
@@ -49,6 +34,7 @@ $(document).ready(function(){
     $('#back').click(function(){
         onBackKeyDown();
     });
+
 });
 
 function initialize() {

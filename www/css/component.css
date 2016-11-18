@@ -3,6 +3,17 @@
 	-webkit-transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
 	transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
 	background: #232224;
+	outline: none;
+    color: #286aab;
+    font-size: 1.1em;
+}
+.button {
+	padding: 1.3em 3em;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    height: 4em;
 }
 
 .ripple-obj {
