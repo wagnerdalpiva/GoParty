@@ -8,12 +8,11 @@
     font-size: 1.1em;
 }
 .button {
-	padding: 1.3em 3em;
     margin: 0;
     position: relative;
     width: 100%;
     display: inline-block;
-    height: 4em;
+    padding: 15px;
 }
 
 .ripple-obj {
@@ -155,4 +154,22 @@
 		transform: scale3d(1.2, 1.2, 1);
 	}
 }
+.icons{
+	width: 40px;
+	height: 40px;
+    float: left;
+    margin-top: -10px;
+}
 
+#conta .icons{
+	background-image: url(../images/perf2.png)
+}
+#indicar .icons{
+	background-image: url(../images/perf2.png)
+}
+#sobre .icons{
+	background-image: url(../images/perf2.png)
+}
+#logout .icons{
+	background-image: url(../images/perf2.png)
+}

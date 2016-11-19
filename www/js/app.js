@@ -8,11 +8,9 @@ document.addEventListener("intel.xdk.device.orientation.change",function(){
 document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown() {
+    $('#buttons').slideUp();
+    $('#images').css('height', $('body').height() - 64);
     if($('#mainpage').css('display') == 'none' && $('#modal-nearby').css('display') == 'none'){
-        /*$('#housepage').slideUp(0, function(){
-            $('#mainpage').slideDown(500);
-            google.maps.event.trigger(map, "resize");
-        });*/
         $('#mainpage').css('display','block');
         $('#housepage').css('display','none');
         google.maps.event.trigger(map, "resize");
@@ -34,6 +32,22 @@ $(document).ready(function(){
     $('#back').click(function(){
         onBackKeyDown();
     });
+
+    if ($('#buttons').css('display') == 'none'){
+        $('#images').css('height', $('body').height() - 64);
+    }else{
+        $('#images').css('height', $('body').height() - 129);
+    }
+
+    $('#config2').click(function(){
+        if ($('#buttons').css('display') == 'none'){
+            $('#buttons').slideDown();
+            $('#images').css('height', $('body').height() - 129);
+        }else{
+            $('#buttons').slideUp();
+            $('#images').css('height', $('body').height() - 64);
+        }
+    })
 
 });
 
@@ -226,10 +240,15 @@ function initialize() {
     $(window).resize(function() {
         google.maps.event.trigger(map, "resize");
 		$('#div_map').css('height',($('#mainpage').height()-64))
-        if($('#images').height() > ($('body').height()*0.92)){
+        /*if($('#images').height() > ($('body').height()*0.92)){
             $('#end').css('height',($('footer').css('height')));
         }else{
             $('#end').css('height',0);
+        }*/
+        if ($('#buttons').css('display') == 'none'){
+            $('#images').css('height', $('body').height() - 64);
+        }else{
+            $('#images').css('height', $('body').height() - 129);
         }
      });
     
@@ -253,9 +272,9 @@ function initialize() {
         });*/
         $('#housepage').css('display','block');
         $('#mainpage').css('display','none');
-        if($('#images').height() > ($('body').height()*0.92)){
+        /*if($('#images').height() > ($('body').height()*0.92)){
             $('#end').css('height',($('footer').css('height')));
-        }
+        }*/
     });
     
     marker.setMap(map);
