@@ -260,7 +260,7 @@ function initialize() {
     var marker = new google.maps.Marker({
             position: new google.maps.LatLng(-29.68, -51.13),
         title:"Feevale",
-        icon: image
+		icon: image
     });
     marker.addListener('click', function(){
         /*$('#mainpage').slideUp(500, function(){
