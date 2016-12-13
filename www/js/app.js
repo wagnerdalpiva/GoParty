@@ -27,6 +27,10 @@ $(document).ready(function(){
         $('#modal-nearby').modal('show');
     });
 
+    $('.mini-box').click(function(){
+        $('#modal-img').modal('show');
+    })
+
 	$('#div_map').css('height',($('#mainpage').height()-64))
 	
     $('#back').click(function(){
@@ -259,8 +263,7 @@ function initialize() {
     var image = 'images/Marker3.png';
     var marker = new google.maps.Marker({
             position: new google.maps.LatLng(-29.68, -51.13),
-        title:"Feevale",
-		icon: image
+            icon: image
     });
     marker.addListener('click', function(){
         /*$('#mainpage').slideUp(500, function(){

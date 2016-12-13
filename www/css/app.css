@@ -160,6 +160,13 @@ html::-webkit-scrollbar {
     text-shadow: 1px 1px #000000;
     margin-bottom: 21px;
  }
+ .mini-box{
+    position: relative;
+    margin-left: 1.8%;
+    margin-bottom: 1.8%;
+    width: 31%;
+    float: left;
+ }
  #buttons{
     display: none;
     padding: 5px;
@@ -187,7 +194,7 @@ html::-webkit-scrollbar {
     text-indent: 250px;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-mask-image: url(../images/spinner.png);
+    -webkit-mask-image: url(../images/Spinner.png);
     background-color: #feefee;
     -webkit-animation-name: spinnerRotate;
     -webkit-animation-duration: 2s;
@@ -210,30 +217,30 @@ button{
     background-color: transparent;
 }
 #options{
-    background: url(../images/options2.png);
+    background: url(../images/Options2.png);
     width: 50px;
     height: 50px;
 }
 #position{
-    background-image: url(../images/man2.png);
+    background-image: url(../images/Man2.png);
     position: relative;
 }
 #search{
-    background-image: url(../images/find2.png);
+    background-image: url(../images/Find2.png);
     position: relative;
 }
 #back{
-    background-image: url(../images/back2.png);
+    background-image: url(../images/Back2.png);
 }
 #camera{
-    background-image: url(../images/camera2.png);
+    background-image: url(../images/Camera2.png);
 }
 #route{
-    background-image: url(../images/route2.png);
+    background-image: url(../images/Route2.png);
 }
 #config, #config2{
     background: transparent;
-    background-image: url(../images/burger.png);
+    background-image: url(../images/Burger.png);
     float: left;
     margin-left: 10px;
     margin-right: 10px;
@@ -247,7 +254,7 @@ button{
     float: right;
 	right: 5px;
     background: transparent;
-    background-image: url('../images/pontos.png');
+    background-image: url('../images/Pontos.png');
 }
 .autor{
 	position: relative;
