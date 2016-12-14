@@ -31,6 +31,10 @@ $(document).ready(function(){
         $('#modal-img').modal('show');
     })
 
+    $('#camera').click(function(){
+        $('#modal-camera').modal('show');
+    })
+
 	$('#div_map').css('height',($('#mainpage').height()-64))
 	
     $('#back').click(function(){

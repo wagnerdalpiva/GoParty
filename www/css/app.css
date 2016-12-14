@@ -216,6 +216,12 @@ button{
 	margin-bottom: 5px;
     background-color: transparent;
 }
+#camera-buttons{
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+}
 #options{
     background: url(../images/Options2.png);
     width: 50px;
@@ -238,6 +244,12 @@ button{
 #route{
     background-image: url(../images/Route2.png);
 }
+#camera-v{
+    background-image: url(../images/Route2.png);
+}
+#camera-x{
+    background-image: url(../images/Route2.png);
+}
 #config, #config2{
     background: transparent;
     background-image: url(../images/Burger.png);
@@ -254,7 +266,7 @@ button{
     float: right;
 	right: 5px;
     background: transparent;
-    background-image: url('../images/Pontos.png');
+    background-image: url('../images/Xis.png');
 }
 .autor{
 	position: relative;
