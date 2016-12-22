@@ -24,11 +24,17 @@ function updateSlider(x) {
 $(document).ready(function(){
     $('#search').click(function(){
         findClosestN(GeoMarker.getPosition(), 5);
+        updateSlider(0);
+        $('#slide').val(0);
         $('#modal-nearby').modal('show');
     });
 
     $('.mini-box').click(function(){
         $('#modal-img').modal('show');
+    })
+
+    $('#route').click(function(){
+        $('#destino').css('display','block');
     })
 
     $('#camera').click(function(){

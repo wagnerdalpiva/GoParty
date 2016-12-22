@@ -151,6 +151,14 @@ html::-webkit-scrollbar {
 	 text-align: left;
 	 padding: 5px;
  }
+ .list-group-item-header{
+    color: #FFF;
+    font-size: 20px;
+ }
+ .list-group-item-text{
+    color: #CCC;
+    font: 16px;
+ }
  .box h3{
     margin-top: -38px;
     margin-right: 10px;
@@ -267,6 +275,20 @@ button{
 	right: 5px;
     background: transparent;
     background-image: url('../images/Xis.png');
+}
+.info{
+    text-align: center;
+    height: 40px;
+    color: #FFF;
+    position: fixed;
+    z-index: 100;
+    background-color: #3d3254;
+    margin: 5px;
+}
+.info p{
+    float: left;
+    margin-left: 3px;
+    padding: 10px;
 }
 .autor{
 	position: relative;
