@@ -8,8 +8,7 @@ document.addEventListener("intel.xdk.device.orientation.change",function(){
 document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown() {
-    $('#buttons').slideUp();
-    $('#images').css('height', $('body').height() - 64);
+    //$('#buttons').slideUp();
     if($('#mainpage').css('display') == 'none' && $('#modal-nearby').css('display') == 'none'){
         $('#mainpage').css('display','block');
         $('#housepage').css('display','none');
@@ -29,7 +28,7 @@ $(document).ready(function(){
         $('#modal-nearby').modal('show');
     });
 
-    $('.mini-box').click(function(){
+    $('#images img').click(function(){
         $('#modal-img').modal('show');
     })
 
@@ -47,13 +46,10 @@ $(document).ready(function(){
         onBackKeyDown();
     });
 
-    if ($('#buttons').css('display') == 'none'){
-        $('#images').css('height', $('body').height() - 64);
-    }else{
-        $('#images').css('height', $('body').height() - 129);
-    }
+    $('.container').css('height', $('body').height() - 64);
 
-    $('#config2').click(function(){
+
+    /*$('#config2').click(function(){
         if ($('#buttons').css('display') == 'none'){
             $('#buttons').slideDown();
             $('#images').css('height', $('body').height() - 129);
@@ -61,7 +57,7 @@ $(document).ready(function(){
             $('#buttons').slideUp();
             $('#images').css('height', $('body').height() - 64);
         }
-    })
+    })*/
 
 });
 
@@ -254,16 +250,8 @@ function initialize() {
     $(window).resize(function() {
         google.maps.event.trigger(map, "resize");
 		$('#div_map').css('height',($('#mainpage').height()-64))
-        /*if($('#images').height() > ($('body').height()*0.92)){
-            $('#end').css('height',($('footer').css('height')));
-        }else{
-            $('#end').css('height',0);
-        }*/
-        if ($('#buttons').css('display') == 'none'){
-            $('#images').css('height', $('body').height() - 64);
-        }else{
-            $('#images').css('height', $('body').height() - 129);
-        }
+        $('.container').css('height', $('body').height() - 64);
+
      });
     
     var zoomLevel =  map.getZoom();

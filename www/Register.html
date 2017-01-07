@@ -40,18 +40,31 @@
         <script type="application/javascript" src="lib/jquery.min.js"></script>
     </head>
 
-    <body>
-      <div class="content">
-        <div class="login">
-          <h1>Cadastre-se</h1>
-          <form action="home.html">
-              <input type="text" name="email" id="email" placeholder="E-Mail" required="required" />
-              <input type="text" name="user" id="user" placeholder="Usuário" required="required" />
-              <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ*" />
-              <input type="password" name="password" id="password" placeholder="Senha" required="required" />
-              <button type="submit" class="btn btn-warning btn-block btn-large">Cadastrar</button>
-          </form>
-          <br>
+  <body>
+    <div class="content">
+      <div class="login" style="display:none">
+        <h1>Cadastre-se</h1>
+        <form action="home.html">
+            <input type="text" name="email" id="email" placeholder="E-Mail" required="required" />
+            <input type="text" name="user" id="user" placeholder="Usuário" required="required" />
+            <input type="password" name="password" id="password" placeholder="Senha" required="required" />
+            <button type="submit" class="btn btn-warning btn-block btn-large">Cadastrar</button>
+        </form>
+        <br>
+      </div>
+
+      <div class="perfil">
+        <div id="Astolfo" class="picture" style="background-image: url(images/perf1.jpg)"></div>
+        <h3>Astolfo</h3>
+        <form action="home.html">
+            <input type="text" name="noma" id="nome" placeholder="Nome" required="required" />
+            <input type="text" name="email" id="email" placeholder="E-Mail" required="required" />
+            <input type="text" name="user" id="user" placeholder="Usuário" required="required" />
+            <input type="password" name="password" id="password" placeholder="Senha" required="required" />
+            <button type="submit" class="btn btn-warning btn-block btn-large">Editar</button>
+            <button class="btn btn-warning btn-block btn-large">Voltar</button>
+        </form>
+        <br>
       </div>
     </div>
   </body>

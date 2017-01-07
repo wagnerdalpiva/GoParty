@@ -6,6 +6,7 @@
 	outline: none;
     color: #286aab;
     font-size: 1.1em;
+    text-align: left;
 }
 .button {
     margin: 0;
@@ -155,10 +156,12 @@
 	}
 }
 .icons{
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
     float: left;
-    margin-top: -10px;
+    margin-top: -5px;
+    margin-right: 10px;
+    background-color: #FFF;
 }
 
 #conta .icons{

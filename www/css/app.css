@@ -15,18 +15,17 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
     text-align: center;
 }
-.login { 
-    position: absolute;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    margin: -100px 0 0 -100px;
-    width:200px;
-    height:200px;
+.container{
+    width: 100%;
+    overflow: scroll;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #daddea;
 }
-.login img{
-	width: 100%;
-	margin-bottom: 30px;
+.descri{
+    padding: 15px;
+    font-family: calibri;
+    font-size: 16px;
 }
 .content h1 { 
     color: #fff;
@@ -139,10 +138,23 @@ html::-webkit-scrollbar {
 	 border-radius: 5px;
 	 border: 0px;
  }
- .container{
-	 width: 100%;
+ #images{
+    width: 100%;
 	 padding: 0px;
      overflow: scroll;
+     -webkit-column-count: 3;
+      -webkit-column-gap:   5px;
+      -moz-column-count:    3;
+      -moz-column-gap:      5px;
+      column-count:         3;
+      column-gap:           5px;
+      grid-row-gap: 5px;
+ }
+
+ #images img{
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
  }
  .box-header{
 	 background-color: rgba(255, 255, 255, 0.19);
@@ -176,8 +188,21 @@ html::-webkit-scrollbar {
     float: left;
  }
  #buttons{
-    display: none;
-    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    width: 70%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.36);
+    transform: skew(-40deg,0deg);
+    -ms-transform: skew(-40deg,0deg);
+    -webkit-transform: skew(-40deg,0deg);
+    right: -30px;
+ }
+ #buttons-aux{
+    position: fixed;
+    bottom: 0px;
+    width: 70%;
+    right: 0px;
  }
  #local{
     float: left;
@@ -258,9 +283,34 @@ button{
 #camera-x{
     background-image: url(../images/Route2.png);
 }
-#config, #config2{
-    background: transparent;
+#likeHouse{
+    background-image: url(../images/Camera2.png);
+}
+#reviewHouse{
+    background-image: url(../images/Camera2.png);
+}
+#avaliar{
+    background-image: url(../images/Camera2.png);
+    float: right;
+}
+#config{
     background-image: url(../images/Burger.png);
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    position: relative;
+}
+#back{
+    background-image: url(../images/Back2.png);
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    position: relative;
+}
+#back-review{
+    background-image: url(../images/Back2.png);
     float: left;
     margin-left: 10px;
     margin-right: 10px;
@@ -319,4 +369,93 @@ button{
 }
 #element::-webkit-scrollbar { 
     display: none; 
+}
+.perfil{
+    padding: 20px;
+}
+.perfil h3{
+    color: #FFF;
+    margin-top: 0px;
+}
+form{
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+.login { 
+    position: absolute;
+    position: absolute;
+    padding: 20px;
+}
+.login img{
+    width: 160px;
+    margin-bottom: 30px;
+}
+#likes{
+    float: left;
+    position: relative;
+}
+#reviews{
+    float: left;
+    position: relative;
+}
+ .review-header{
+    background-color: rgba(255, 255, 255, 0.73);
+    height: 50px;
+    color: #2f4190;
+    text-align: left;
+    padding: 5px;
+ }
+ .review-content{
+    padding: 20px;
+    background-color: #FFF;
+    text-align: left;
+    margin-bottom: 15px;
+ }
+
+ .starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../images/star-off.svg');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../images/star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
+
+#review-title{
+    height: 64px;
+    padding: 5px
+}
+h3{
+    float: left;
 }
